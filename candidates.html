@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FightGhostJobs — For Candidates</title>
+<meta name="description" content="FightGhostJobs — a free public registry that makes job postings provable. Coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#171412; --bone:#FBF7F1; --card:#FFFFFF; --ember:#E8491E; --ember-dark:#C23814;
+    --verified:#1F7A5C; --line:#E7DFD3; --line-soft:#F0ECE3; --panel:#F4F1EA; --muted:#6B655C; --faint:#8A837A;
+  }
+  body{margin:0;font-family:'Work Sans',system-ui,sans-serif;background:var(--bone);color:var(--ink)}
+  a{color:var(--ember);text-decoration:none}
+  a:hover{color:var(--ember-dark)}
+  h1,h2,h3{margin:0;letter-spacing:-.01em}
+  .disp{font-family:'Space Grotesk',sans-serif}
+  .wrap{max-width:1200px;margin:0 auto;padding-left:64px;padding-right:64px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ember{background:var(--ember);color:#fff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px}
+  .eyebrow{font-size:13px;font-weight:700;color:var(--ember);text-transform:uppercase;letter-spacing:.08em}
+  .chip{background:var(--panel);padding:7px 12px;border-radius:8px;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;color:var(--ink)}
+  .cite{font-size:12px;color:var(--faint);vertical-align:super}
+  .footnote{font-size:13px;line-height:1.7;color:var(--muted)}
+  .shot{width:100%;display:block;border-radius:10px;border:1px solid var(--line)}
+  .shotwrap{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px -28px rgba(23,20,18,.22)}
+  .caption{font-size:13px;color:var(--faint);margin-top:10px;}
+  .badge-verified-seal{position:relative;display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 10px;border-radius:999px;background:linear-gradient(180deg,#EAF6EF,#DFF0E6);border:1px solid #BEE1CE;color:var(--verified);font-weight:700;font-size:13px;letter-spacing:.01em;cursor:default}
+  .badge-verified-seal .seal-mark{width:16px;height:16px;border-radius:50%;background:var(--verified);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;flex-shrink:0;box-shadow:0 0 0 2px #EAF6EF,0 0 0 3px var(--verified)}
+  .badge-verified-seal:hover{box-shadow:0 0 0 3px rgba(31,122,92,.18)}
+  .badge-verified-seal:hover .verified-tooltip,.badge-verified-seal:focus .verified-tooltip{display:block}
+  .verified-tooltip{display:none;position:absolute;top:calc(100% + 10px);left:0;width:290px;background:var(--ink);color:#F4F1EA;font-size:12.5px;font-weight:500;font-style:normal;line-height:1.55;padding:14px 16px;border-radius:10px;z-index:30;box-shadow:0 14px 30px -10px rgba(23,20,18,.4);text-align:left}
+  .verified-tooltip::after{content:'';position:absolute;bottom:100%;left:16px;border:6px solid transparent;border-bottom-color:var(--ink)}
+  .verified-tooltip .vt-title{display:block;font-weight:700;color:#fff;margin-bottom:8px;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em}
+  .verified-tooltip ul{margin:0;padding-left:16px}
+  .verified-tooltip li{margin-bottom:6px}
+  .verified-tooltip li:last-child{margin-bottom:0}
+
+</style>
+</head>
+<body>
+<div style="width:100%;background:var(--bone);color:var(--ink);display:flex;flex-direction:column;">
+
+  <!-- NAV -->
+  <div style="height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--line);background:var(--card)">
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;">
+      <div style="width:14px;height:14px;border-radius:3px;background:var(--ember)"></div>
+      <div style="font-size:17px;font-weight:700;color:var(--ink);">FightGhostJobs</div>
+    </a>
+    <div style="display:flex;gap:36px;">
+      <div style="font-size:15px;font-weight:700;color:var(--ember);">For Candidates</div>
+      <a href="employers.html" style="font-size:15px;font-weight:500;color:var(--ink)">For Employers</a>
+      <a href="index.html" style="font-size:15px;font-weight:500;color:var(--ink)">Home</a>
+    </div>
+    <div class="chip" style="color:var(--faint);cursor:default;">Search — coming at launch</div>
+  </div>
+
+  <!-- HERO -->
+  <div class="wrap" style="padding-top:80px;padding-bottom:56px;display:flex;gap:56px;align-items:center;">
+    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
+      <div class="eyebrow">For candidates</div>
+      <h1 style="font-size:48px;line-height:1.1;font-weight:700;">Know before you spend the evening.</h1>
+      <p style="font-size:17px;line-height:1.6;color:var(--muted);margin:0;max-width:480px;">
+        43% of candidates say they struggle just to tell whether a job or the employer behind it is even legitimate<span class="cite">1</span> —
+        and once burned, people stop trusting good listings too. 38% now mass-apply to roles rather than tailor an
+        application to any one of them<span class="cite">2</span>. FightGhostJobs breaks that cycle: search any company, see
+        exactly what they've disclosed, and decide for yourself.
+      </p>
+      <div class="chip" style="color:var(--faint);cursor:default;width:fit-content;">Search — coming at launch</div>
+      <div style="font-size:13px;color:var(--faint);">A one-time, free email verification is required to search or comment — no password, no account form.</div>
+    </div>
+    <div style="flex:1;">
+      <div class="shotwrap">
+        <img class="shot" src="images/candidate-search-result.jpg" alt="A real search result card from the FightGhostJobs registry, showing a Verified posting with AI-filtering, recruiter and applicant-cap disclosures">
+      </div>
+      <div class="caption">An actual result from the FightGhostJobs pilot registry — real fields, real disclosures.</div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU NEVER HAVE TO GUESS -->
+  <div style="padding:72px 0;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="eyebrow">What you never have to guess again</div>
+      <h2 style="font-size:32px;font-weight:700;margin-top:10px;max-width:560px;">Every listing discloses the same five things — plainly, without a score.</h2>
+      <div class="card" style="margin-top:32px;padding:8px;max-width:820px;">
+        <div style="display:flex;flex-direction:column;">
+          <div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--line-soft);"><div style="font-size:14px;color:var(--muted);">Is this listing still actually open?</div><div style="font-size:14px;font-weight:700;color:var(--verified);">Disclosed</div></div>
+          <div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--line-soft);"><div style="font-size:14px;color:var(--muted);">Is AI filtering my application before a human sees it?</div><div style="font-size:14px;font-weight:700;color:var(--verified);">Disclosed</div></div>
+          <div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--line-soft);"><div style="font-size:14px;color:var(--muted);">Am I talking to an AI in the interview itself?</div><div style="font-size:14px;font-weight:700;color:var(--verified);">Disclosed</div></div>
+          <div style="display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--line-soft);"><div style="font-size:14px;color:var(--muted);">Is a third-party recruiter running this search?</div><div style="font-size:14px;font-weight:700;color:var(--verified);">Disclosed</div></div>
+          <div style="display:flex;justify-content:space-between;padding:16px 24px;"><div style="font-size:14px;color:var(--muted);">If there's an apply link, is it the real one?</div><div style="font-size:14px;font-weight:700;color:var(--verified);">Verified</div></div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:var(--faint);margin-top:10px;max-width:560px;">Not every listing has a destination link — that's the employer's choice, and a paid one. When there isn't one yet, we say so plainly instead of leaving it blank.</div>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-top:32px;max-width:560px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:15px;line-height:1.5;">A one-time, no-cost email verification — no password, no account form — is required to search or comment, period</div></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:15px;line-height:1.5;">A destination link only exists if the employer chose to add one, which is a paid option on their side — when it's there, your verification is what lets you reach it</div></div>
+        <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:15px;line-height:1.5;">We never score or rate an employer. We disclose what's true and let you decide — "disclose, don't judge"</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY WE DON'T REWARD MASS-APPLYING -->
+  <div style="padding:72px 0;background:var(--ink);color:var(--bone);">
+    <div class="wrap">
+      <div class="eyebrow" style="color:#F2A98C;">Your time is the actual cost</div>
+      <h2 style="font-size:30px;font-weight:700;margin-top:10px;color:var(--bone);max-width:640px;">A real application takes 31 minutes. Spent on a listing that was never real, that's 31 minutes gone for nothing.</h2>
+      <p style="font-size:15px;line-height:1.65;color:#C9C2B6;margin-top:14px;max-width:640px;">
+        The average job seeker spends roughly 51 hours on applications alone over a search<span class="cite" style="color:#C9C2B6;">4</span> —
+        and 47% have applied to a job that turned out not to exist at all<span class="cite" style="color:#C9C2B6;">5</span>.
+        FightGhostJobs isn't built to help you fire off more applications faster. It's built so the ones you do send go
+        somewhere real, to an employer who's shown their work — which is the opposite of spray-and-pray, and we think
+        that's worth favoring.
+      </p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#332E29;border-radius:14px;overflow:hidden;margin-top:28px;max-width:640px;">
+        <div style="background:var(--ink);padding:24px 22px;">
+          <div class="disp" style="font-size:34px;font-weight:700;color:var(--ember);">51 hrs</div>
+          <div style="font-size:13.5px;line-height:1.5;color:#C9C2B6;margin-top:8px;">average time spent on applications over one job search</div>
+        </div>
+        <div style="background:var(--ink);padding:24px 22px;">
+          <div class="disp" style="font-size:34px;font-weight:700;color:var(--ember);">47%</div>
+          <div style="font-size:13.5px;line-height:1.5;color:#C9C2B6;margin-top:8px;">have applied to a job that turned out not to exist</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE VERIFIED SEAL, EXPLAINED -->
+  <div style="padding:72px 0;background:var(--panel);border-bottom:1px solid var(--line);">
+    <div class="wrap" style="display:flex;gap:56px;align-items:center;">
+      <div style="flex:1;">
+        <div class="eyebrow">The Verified seal</div>
+        <h2 style="font-size:30px;font-weight:700;margin-top:10px;">Not just a checkmark. Hover it, and it tells you exactly what it means.</h2>
+        <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-top:14px;max-width:480px;">Every result on the registry carries this seal. Hover or tab to it — on the live site and right here — and it spells out, in plain language, what FightGhostJobs actually checked before showing it to you.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:14px;line-height:1.5;">Supplied directly by the employer — not scraped or reposted by a third party</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:14px;line-height:1.5;">Checked against the registry to catch duplicate or copy-pasted reposts</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:14px;line-height:1.5;">If destination links are shown, they're the exact addresses the employer named as legitimate</div></div>
+        </div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:18px;padding:56px 24px;">
+        <div class="badge-verified-seal" style="font-size:16px;padding:9px 20px 9px 14px;" tabindex="0">
+          <span class="seal-mark" style="width:20px;height:20px;font-size:12px;">&#10003;</span>Verified
+          <span class="verified-tooltip" role="tooltip">
+            <span class="vt-title">What Verified means</span>
+            <ul>
+              <li>Supplied directly by the employer who owns this posting, not scraped or reposted by a third party</li>
+              <li>Checked against the registry to catch duplicate or copy-pasted reposts</li>
+              <li>If destination links are shown, they are the exact addresses this employer named as legitimate ways to apply</li>
+            </ul>
+          </span>
+        </div>
+        <div class="caption">↑ Hover or tab to it — this is live on this page.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT HAPPENS WHEN YOU OPEN A POSTING -->
+  <div style="padding:72px 0;background:var(--bone);">
+    <div class="wrap" style="display:flex;gap:56px;align-items:flex-start;">
+      <div style="flex:1;">
+        <div class="eyebrow">Real screen, honest edge case</div>
+        <h2 style="font-size:30px;font-weight:700;margin-top:10px;">Sometimes the honest answer is "no link yet." That's still worth knowing.</h2>
+        <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-top:14px;">This is the actual detail view a candidate sees on the live registry. Here, the employer confirmed the posting but hasn't added a destination link yet — FightGhostJobs says so plainly instead of guessing or hiding the gap. When an employer has added protected links, verified candidates get a one-time, tokenized link straight to the real application — never a shared or public URL that could be scraped or spoofed.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:14px;line-height:1.5;">Comments are always visible on every posting — even paid-tier employers can't turn them off</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--verified);font-weight:700;">✓</div><div style="font-size:14px;line-height:1.5;">Destination links are single-use and watermarked to your verified identity, so they can't be copy-pasted around</div></div>
+        </div>
+      </div>
+      <div style="flex:1;">
+        <div class="shotwrap">
+          <img class="shot" src="images/candidate-posting-modal.jpg" alt="Real FightGhostJobs posting detail modal showing an honest disclosure that no destination link has been provided yet">
+        </div>
+        <div class="caption">Live posting-detail view from the FightGhostJobs pilot registry.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFICIAL SITE DIRECTIVE -->
+  <div style="padding:72px 0;background:var(--ink);color:var(--bone);">
+    <div class="wrap">
+      <div class="eyebrow" style="color:#F2A98C;">Before you click "Apply"</div>
+      <h2 style="font-size:30px;font-weight:700;margin-top:10px;color:var(--bone);max-width:600px;">95% of job seekers have hit a suspicious listing or offer<span class="cite" style="color:#C9C2B6;">3</span>. Check here first.</h2>
+      <p style="font-size:15px;line-height:1.65;color:#C9C2B6;margin-top:14px;max-width:620px;">If a link, a recruiter DM, or a "final round" text feels off, search the company on FightGhostJobs before you hand over anything. If it's not in the registry, that's information too. Search opens to everyone at launch — nothing to sign up for now.</p>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div style="padding:48px 0;background:var(--card);border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div style="font-size:13px;font-weight:700;color:var(--faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;">Sources</div>
+      <div class="footnote" style="display:flex;flex-direction:column;gap:6px;">
+        <div>1 — iHire, <a href="https://www.prnewswire.com/news-releases/ihires-2026-state-of-online-recruiting-report-reveals-trust-gap-between-employers--job-seekers-302884899.html">2026 State of Online Recruiting Report</a>.</div>
+        <div>2 — Greenhouse, <a href="https://www.greenhouse.com/blog/greenhouse-2024-state-of-job-hunting-report">2024 State of Job Hunting Report</a>.</div>
+        <div>3 — Monster, <a href="https://www.monster.com/career-advice/research/job-scam-statistics">2026 Job Scam Report</a>.</div>
+        <div>4 — Zippia, <a href="https://www.zippia.com/advice/job-hunters-51-hours-applying/">Job Hunters Can Expect To Spend 51 Hours Just Filling Out Applications</a>.</div>
+        <div>5 — Enhancv, <a href="https://enhancv.com/blog/ghost-jobs-statistics/">2026 ghost jobs survey</a> (1,000 U.S. professionals, March 2026).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="wrap" style="padding:32px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-size:13px;color:var(--faint);">FightGhostJobs · privacy@fightghostjobs.com</div>
+    <div style="display:flex;gap:28px;">
+      <a href="index.html" style="font-size:13px;color:var(--faint);">Home</a>
+      <a href="employers.html" style="font-size:13px;color:var(--faint);">For Employers</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
