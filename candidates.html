@@ -44,6 +44,12 @@
   .verified-tooltip li{margin-bottom:6px}
   .verified-tooltip li:last-child{margin-bottom:0}
 
+  /* Footer spacing fix. The footer bar used to shrink to the width of its own text, so the address touched the first link.
+     It now keeps a gap between the address and the links (and wraps if space runs out), and on desktop it is as wide as the page content again. */
+  .wrap[style*="padding:32px 0"]{gap:16px 28px;flex-wrap:wrap}
+  @media (min-width:1024px){
+    .wrap[style*="padding:32px 0"]{width:calc(100% - 128px);padding-left:64px!important;padding-right:64px!important}
+  }
   /* Responsive layout for tablets and phones. Everything below is inside a media query for screens narrower than 1024px, so desktop is unchanged.
      The pages style most things inline, so these rules match the inline styles and use !important to override them. */
   @media (max-width:1023px){

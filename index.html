@@ -33,6 +33,12 @@
   .shot{width:100%;display:block;border-radius:10px;border:1px solid var(--line)}
   .shotwrap{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px -28px rgba(23,20,18,.22)}
 
+  /* Footer spacing fix. The footer bar used to shrink to the width of its own text, so the address touched the first link.
+     It now keeps a gap between the address and the links (and wraps if space runs out), and on desktop it is as wide as the page content again. */
+  .wrap[style*="padding:32px 0"]{gap:16px 28px;flex-wrap:wrap}
+  @media (min-width:1024px){
+    .wrap[style*="padding:32px 0"]{width:calc(100% - 128px);padding-left:64px!important;padding-right:64px!important}
+  }
   /* Responsive layout for tablets and phones. Everything below is inside a media query for screens narrower than 1024px, so desktop is unchanged.
      The pages style most things inline, so these rules match the inline styles and use !important to override them. */
   @media (max-width:1023px){
