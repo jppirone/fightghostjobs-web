@@ -33,6 +33,77 @@
   .shot{width:100%;display:block;border-radius:10px;border:1px solid var(--line)}
   .shotwrap{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px -28px rgba(23,20,18,.22)}
 
+  /* Responsive layout for tablets and phones. Everything below is inside a media query for screens narrower than 1024px, so desktop is unchanged.
+     The pages style most things inline, so these rules match the inline styles and use !important to override them. */
+  @media (max-width:1023px){
+    .wrap{padding-left:32px!important;padding-right:32px!important;width:100%;box-sizing:border-box}
+    /* header: logo, links, then address and button, wrapping onto rows instead of overflowing */
+    [style*="height:88px"]{height:auto!important;flex-wrap:wrap!important;padding:14px 32px!important;gap:10px 24px!important}
+    [style*="height:88px"] > div[style*="gap:16px"]{flex:1 1 100%!important;justify-content:space-between!important}
+    [style*="height:88px"] > div[style*="gap:36px"]{gap:8px 28px!important;flex-wrap:wrap!important}
+    [style*="height:88px"] > div[style*="gap:36px"] > *{display:flex!important;align-items:center!important;min-height:44px!important}
+    [style*="height:88px"] > a[href="index.html"]{min-height:44px}
+    .btn{min-height:44px;box-sizing:border-box}
+    /* footer links */
+    .wrap > div[style*="gap:28px"] a{display:inline-flex;align-items:center;min-height:44px}
+    img{max-width:100%;height:auto}
+  }
+  @media (max-width:900px){
+    /* two-column sections stack into one column */
+    .wrap[style*="gap:56px"],.wrap[style*="gap:64px"],.card[style*="gap:40px"],[style*="display:flex;gap:32px;margin-top:16px"]{flex-direction:column!important;align-items:stretch!important;gap:32px!important}
+    .wrap[style*="gap:56px"] > *,.wrap[style*="gap:64px"] > *,.card[style*="gap:40px"] > *,[style*="display:flex;gap:32px;margin-top:16px"] > *{flex:0 0 auto!important;min-width:0}
+    [style*="grid-template-columns:repeat(4,minmax(0,1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  }
+  @media (max-width:640px){
+    html{-webkit-text-size-adjust:100%}
+    body{overflow-wrap:break-word}
+    .wrap{padding-left:20px!important;padding-right:20px!important}
+    /* header */
+    [style*="height:88px"]{padding:10px 20px!important;gap:4px 16px!important}
+    [style*="height:88px"] > a[href="index.html"],[style*="height:88px"] > div:first-child{flex:1 1 100%!important}
+    [style*="height:88px"] > div[style*="gap:36px"]{flex:1 1 100%!important;gap:0 18px!important}
+    [style*="height:88px"] [style*="font-size:15px"]{font-size:15px!important}
+    [style*="height:88px"] > div[style*="gap:16px"]{flex-direction:column-reverse!important;align-items:stretch!important;gap:8px!important;padding:4px 0 6px}
+    [style*="height:88px"] > div[style*="gap:16px"] > span{text-align:center}
+    [style*="height:88px"] > .chip{flex:1 1 100%;justify-content:center;box-sizing:border-box}
+    /* section spacing */
+    .wrap[style*="padding-top:88px"],.wrap[style*="padding-top:80px"]{padding-top:40px!important}
+    [style*="padding:80px 0"],[style*="padding:72px 0"],[style*="padding:64px 0"]{padding-top:48px!important;padding-bottom:48px!important}
+    .card[style*="padding:36px"],.card[style*="padding:32px"],.card[style*="padding:28px"]{padding:22px!important}
+    /* type */
+    h1{font-size:34px!important}
+    h2[style*="font-size:34px"],h2[style*="font-size:32px"],h2[style*="font-size:30px"]{font-size:26px!important}
+    [style*="font-size:14px"],[style*="font-size:15px"],[style*="font-size:13.5px"]{font-size:16px!important}
+    [style*="font-size:13px"],[style*="font-size:12.5px"]{font-size:14px!important}
+    [style*="height:88px"] [style*="font-size:14px"]{font-size:15px!important}
+    [style*="font-size:12.5px"],[style*="font-size:13px"],[style*="font-size:14px"],[style*="font-size:15px"],[style*="font-size:13.5px"]{line-height:1.55}
+    [style*="background:var(--ink);padding:28px 24px"],[style*="background:var(--ink);padding:24px 22px"]{padding-left:4px!important;padding-right:4px!important}
+    .footnote,.caption,.mock-banner{font-size:14px!important;line-height:1.7}
+    .footnote[style*="flex-direction:column"]{gap:12px!important}
+    td{font-size:15px}
+    /* buttons fill the row and are easy to tap */
+    .btn{width:100%!important;min-height:48px}
+    [style*="justify-content:center;margin-top:28px"]{flex-direction:column!important}
+    /* grids and card rows become one column */
+    [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns:repeat(3,minmax(0,1fr))"],[style*="grid-template-columns:repeat(4,minmax(0,1fr))"]{grid-template-columns:minmax(0,1fr)!important}
+    [style*="justify-content:space-between;padding:16px 24px"]{flex-direction:column!important;gap:6px!important;padding:14px 16px!important}
+    /* footer */
+    .wrap[style*="padding:32px 0"]{flex-direction:column!important;align-items:flex-start!important;gap:8px!important}
+    .wrap > div[style*="gap:28px"]{gap:20px!important;flex-wrap:wrap}
+    /* small mock of the employer dashboard: shrink so it fits on the narrowest phones */
+    [style*="background:#FBF7F1;padding:20px"]{padding:12px!important}
+    [style*="border-radius:10px;padding:14px"]{padding:10px!important}
+    [style*="font-size:22px"]{font-size:18px!important}
+    /* sample dashboard: the table scrolls sideways inside its own card, the page itself does not */
+    .card[style*="overflow:hidden"]{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+    table{min-width:720px}
+    td:first-child,th:first-child{min-width:190px}
+    .kpi{padding:16px!important}
+    /* the "Verified" tooltip stays on screen */
+    .verified-tooltip{width:min(290px,calc(100vw - 48px));left:50%;transform:translateX(-50%)}
+    .verified-tooltip::after{left:50%;margin-left:-6px}
+  }
+
 </style>
 </head>
 <body>
