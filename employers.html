@@ -12,8 +12,8 @@
 <style>
 
   :root{
-    --ink:#171412; --bone:#FBF7F1; --card:#FFFFFF; --ember:#E8491E; --ember-dark:#C23814;
-    --verified:#1F7A5C; --line:#E7DFD3; --line-soft:#F0ECE3; --panel:#F4F1EA; --muted:#6B655C; --faint:#8A837A;
+    --ink:#171412; --bone:#FBF7F1; --card:#FFFFFF; --ember:#C43E19; --ember-dark:#A8320F;
+    --verified:#1F7A5C; --line:#E7DFD3; --line-soft:#F0ECE3; --panel:#F4F1EA; --muted:#6B655C; --faint:#726C64; --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;
   }
   body{margin:0;font-family:'Work Sans',system-ui,sans-serif;background:var(--bone);color:var(--ink)}
   a{color:var(--ember);text-decoration:none}
@@ -34,6 +34,21 @@
   .shotwrap{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px -28px rgba(23,20,18,.22)}
   .caption{font-size:13px;color:var(--faint);margin-top:10px;}
 
+  /* Brand: logo and accessibility (WCAG 2.2 AA). The logo is one link back to the start page on every page. */
+  .nav-logo{display:flex;align-items:center;gap:12px;color:var(--ink)}
+  .nav-mark{flex:none;display:block}
+  .nav-wordmark{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:-.025em}
+  .wm-fight{color:var(--ember)}
+  .wm-ghost{color:transparent;-webkit-text-stroke:1.2px var(--ink)}
+  .wm-jobs{color:var(--ink)}
+  @media (forced-colors:active){.wm-ghost{color:CanvasText;-webkit-text-stroke:0}}
+  .skip-link{position:absolute;left:-9999px;top:8px;padding:10px 16px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;border-radius:8px;background:var(--ink);color:#fff;font-size:14px;font-weight:600;z-index:100}
+  .skip-link:focus{left:8px;color:#fff}
+  [aria-current="page"]{color:var(--ember);font-weight:700}
+  [style*="background:var(--ink)"] .cite{color:#9C958A}
+  main a:not(.btn):not([style*="display:block"]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+  .mono{font-family:var(--font-mono);font-size:.92em;letter-spacing:0}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   /* Footer spacing fix. The footer bar used to shrink to the width of its own text, so the address touched the first link.
      It now keeps a gap between the address and the links (and wraps if space runs out), and on desktop it is as wide as the page content again. */
   .wrap[style*="padding:32px 0"]{gap:16px 28px;flex-wrap:wrap}
@@ -47,8 +62,8 @@
     /* header: logo, links, then address and button, wrapping onto rows instead of overflowing */
     [style*="height:88px"]{height:auto!important;flex-wrap:wrap!important;padding:14px 32px!important;gap:10px 24px!important}
     [style*="height:88px"] > div[style*="gap:16px"]{flex:1 1 100%!important;justify-content:space-between!important}
-    [style*="height:88px"] > div[style*="gap:36px"]{gap:8px 28px!important;flex-wrap:wrap!important}
-    [style*="height:88px"] > div[style*="gap:36px"] > *{display:flex!important;align-items:center!important;min-height:44px!important}
+    [style*="height:88px"] > [style*="gap:36px"]{gap:8px 28px!important;flex-wrap:wrap!important}
+    [style*="height:88px"] > [style*="gap:36px"] > *{display:flex!important;align-items:center!important;min-height:44px!important}
     [style*="height:88px"] > a[href="index.html"]{min-height:44px}
     .btn{min-height:44px;box-sizing:border-box}
     /* footer links */
@@ -68,7 +83,7 @@
     /* header */
     [style*="height:88px"]{padding:10px 20px!important;gap:4px 16px!important}
     [style*="height:88px"] > a[href="index.html"],[style*="height:88px"] > div:first-child{flex:1 1 100%!important}
-    [style*="height:88px"] > div[style*="gap:36px"]{flex:1 1 100%!important;gap:0 18px!important}
+    [style*="height:88px"] > [style*="gap:36px"]{flex:1 1 100%!important;gap:0 18px!important}
     [style*="height:88px"] [style*="font-size:15px"]{font-size:15px!important}
     [style*="height:88px"] > div[style*="gap:16px"]{flex-direction:column-reverse!important;align-items:stretch!important;gap:8px!important;padding:4px 0 6px}
     [style*="height:88px"] > div[style*="gap:16px"] > span{text-align:center}
@@ -114,24 +129,24 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div style="width:100%;background:var(--bone);color:var(--ink);display:flex;flex-direction:column;">
 
   <!-- NAV -->
-  <div style="height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--line);background:var(--card)">
-    <a href="index.html" style="display:flex;align-items:center;gap:10px;">
-      <div style="width:14px;height:14px;border-radius:3px;background:var(--ember)"></div>
-      <div style="font-size:17px;font-weight:700;color:var(--ink);">FightGhostJobs</div>
-    </a>
-    <div style="display:flex;gap:36px;">
+  <header style="height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--line);background:var(--card)">
+    <a href="index.html" class="nav-logo" aria-label="FightGhostJobs home" style="display:flex;align-items:center;gap:12px;"><svg class="nav-mark" width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="4.5" y="4.5" width="40" height="40" rx="10" fill="var(--ink)" fill-opacity=".16" stroke="var(--ink)" stroke-opacity=".55" stroke-width="2.4" stroke-dasharray="5 4"/><rect x="18" y="18" width="42" height="42" rx="10" fill="var(--ember)"/><path d="M29 40 L37 48 L50 31" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-wordmark"><span class="wm-fight">Fight</span><span class="wm-ghost">Ghost</span><span class="wm-jobs">Jobs</span></span></a>
+    <nav aria-label="Main" style="display:flex;gap:36px;">
       <a href="candidates.html" style="font-size:15px;font-weight:500;color:var(--ink)">For Candidates</a>
-      <div style="font-size:15px;font-weight:700;color:var(--ember);">For Employers</div>
+      <div aria-current="page" style="font-size:15px;font-weight:700;color:var(--ember);">For Employers</div>
       <a href="index.html" style="font-size:15px;font-weight:500;color:var(--ink)">Home</a>
-    </div>
+    </nav>
     <div style="display:flex;align-items:center;gap:16px;">
       <span style="font-size:14px;color:var(--muted);">sales@fightghostjobs.com</span>
       <a href="mailto:sales@fightghostjobs.com?subject=I%20want%20to%20Fight%20Ghost%20Jobs%21" class="btn btn-ember" style="padding:11px 20px;font-size:14px;">Talk to us about the pilot →</a>
     </div>
-  </div>
+  </header>
+
+  <main id="main" style="display:flex;flex-direction:column;">
 
   <!-- HERO -->
   <div class="wrap" style="padding-top:80px;padding-bottom:56px;">
@@ -268,23 +283,23 @@
             <div style="background:#FBF7F1;padding:20px;">
               <div style="display:flex;gap:10px;margin-bottom:14px;">
                 <div style="flex:1;background:#fff;border:1px solid #E7DFD3;border-radius:10px;padding:14px;">
-                  <div style="font-size:11px;color:#8A837A;">Searches</div>
+                  <div style="font-size:11px;color:#726C64;">Searches</div>
                   <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#171412;">1,284</div>
                 </div>
                 <div style="flex:1;background:#fff;border:1px solid #E7DFD3;border-radius:10px;padding:14px;">
-                  <div style="font-size:11px;color:#8A837A;">Detail views</div>
+                  <div style="font-size:11px;color:#726C64;">Detail views</div>
                   <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#171412;">406</div>
                 </div>
                 <div style="flex:1;background:#fff;border:1px solid #E7DFD3;border-radius:10px;padding:14px;">
-                  <div style="font-size:11px;color:#8A837A;">Link clicks</div>
+                  <div style="font-size:11px;color:#726C64;">Link clicks</div>
                   <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#171412;">151</div>
                 </div>
               </div>
               <div style="background:#fff;border:1px solid #E7DFD3;border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px;">
                 <div style="display:flex;justify-content:space-between;font-size:12px;color:#171412;"><span>Senior Data Analyst</span><span style="font-weight:700;">44%</span></div>
-                <div style="background:#F4F1EA;border-radius:4px;height:6px;"><div style="background:#E8491E;width:82%;height:100%;border-radius:4px;"></div></div>
+                <div style="background:#F4F1EA;border-radius:4px;height:6px;"><div style="background:#C43E19;width:82%;height:100%;border-radius:4px;"></div></div>
                 <div style="display:flex;justify-content:space-between;font-size:12px;color:#171412;margin-top:4px;"><span>Project Manager</span><span style="font-weight:700;">31%</span></div>
-                <div style="background:#F4F1EA;border-radius:4px;height:6px;"><div style="background:#E8491E;width:58%;height:100%;border-radius:4px;"></div></div>
+                <div style="background:#F4F1EA;border-radius:4px;height:6px;"><div style="background:#C43E19;width:58%;height:100%;border-radius:4px;"></div></div>
               </div>
             </div>
           </div>
@@ -338,15 +353,17 @@
     </div>
   </div>
 
+  </main>
+
   <!-- FOOTER -->
-  <div class="wrap" style="padding:32px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+  <footer class="wrap" style="padding:32px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
     <div style="font-size:13px;color:var(--faint);">FightGhostJobs · sales@fightghostjobs.com</div>
     <div style="display:flex;gap:28px;">
       <a href="index.html" style="font-size:13px;color:var(--faint);">Home</a>
       <a href="candidates.html" style="font-size:13px;color:var(--faint);">For Candidates</a>
       <a href="privacy.html" style="font-size:13px;color:var(--faint);">Privacy</a>
     </div>
-  </div>
+  </footer>
 
 </div>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8b38dca2b4a0487b974fc2fa59a7965b"}'></script><!-- End Cloudflare Web Analytics -->
