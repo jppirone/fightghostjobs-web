@@ -141,6 +141,8 @@
   .kinds-link{display:inline-flex;align-items:center;min-height:44px}
   .kinds-list{margin:14px 0 0 0;padding-left:20px;font-size:15px;line-height:1.65}
   .kinds-list li{margin:0 0 10px 0}
+  .kinds-group{font-size:14px;font-weight:700;line-height:1.4;margin:20px 0 0 0}
+  .kinds-group + .kinds-list{margin-top:8px}
   @media (max-width:900px){
     .kinds-box{background:transparent;border:0;border-radius:0;overflow:visible}
     .kinds-table,.kinds-table thead,.kinds-table tbody,.kinds-table tr,.kinds-table th,.kinds-table td,.kinds-table caption{display:block}
@@ -181,7 +183,8 @@
   <div class="wrap" style="padding-top:64px;padding-bottom:32px;width:100%;max-width:1328px;box-sizing:border-box;">
     <div class="eyebrow">Kinds of openings</div>
     <h1 style="font-size:46px;line-height:1.1;font-weight:700;margin-top:10px;max-width:760px;">Not every old job ad is fake. Here is how we tell the kinds apart.</h1>
-    <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:16px 0 0;max-width:760px;">Some openings are hiring this week. Some are collecting resumes for later. Some are on hold, required by policy, or hard to fill. On a job board they all look the same. On FightGhostJobs we record the date an opening went live and every change after it. <strong>Coming:</strong> the employer says which kind it is. Every statement on an opening is the employer's own; FightGhostJobs records it and its date.</p>
+    <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:16px 0 0;max-width:760px;">Some openings are hiring this week. Some are collecting resumes for later. Some are on hold, required by policy, or hard to fill. On a job board they all look the same. On FightGhostJobs we record the date an opening went live and every change after it. The employer says which kind it is (available at launch). Every statement on an opening is the employer's own; FightGhostJobs records it and its date.</p>
+    <p style="font-size:14px;line-height:1.6;color:var(--muted);margin:14px 0 0;max-width:760px;">Features marked (available at launch) are planned for the pilot launch and are not built yet. The other features described here are built and in testing.</p>
   </div>
 
   <!-- THE FIVE KINDS -->
@@ -202,8 +205,8 @@
           <tr role="row">
             <th scope="row" role="rowheader" data-label="Kind">Pipeline or evergreen</th>
             <td role="cell" data-label="What it is">Not hiring now; collecting resumes for later.</td>
-            <td role="cell" data-label="What the candidate sees">The date the opening was added. <strong>Coming:</strong> the employer's stated kind ("not a current vacancy, collecting resumes").</td>
-            <td role="cell" data-label="What the employer must do"><strong>Coming:</strong> pick that label, and not present it as a current vacancy.</td>
+            <td role="cell" data-label="What the candidate sees">The date the opening was added. The employer's stated kind, for example "not a current vacancy, collecting resumes" (available at launch).</td>
+            <td role="cell" data-label="What the employer must do">Pick that label, and do not present it as a current vacancy (available at launch).</td>
             <td role="cell" data-label="What FightGhostJobs does not claim">That the employer will ever hire from the pipeline.</td>
           </tr>
           <tr role="row">
@@ -216,14 +219,14 @@
           <tr role="row">
             <th scope="row" role="rowheader" data-label="Kind">Required advertisement</th>
             <td role="cell" data-label="What it is">Advertised to meet a legal or policy rule; a candidate may already be identified.</td>
-            <td role="cell" data-label="What the candidate sees"><strong>Coming:</strong> the employer's statement, in neutral words: advertised to meet a requirement, a candidate may already be identified.</td>
-            <td role="cell" data-label="What the employer must do"><strong>Coming:</strong> choose that label.</td>
+            <td role="cell" data-label="What the candidate sees">The employer's statement, in neutral words: advertised to meet a requirement, a candidate may already be identified (available at launch).</td>
+            <td role="cell" data-label="What the employer must do">Choose that label (available at launch).</td>
             <td role="cell" data-label="What FightGhostJobs does not claim">A judgment of the employer. The label is neutral, not an accusation.</td>
           </tr>
           <tr role="row">
             <th scope="row" role="rowheader" data-label="Kind">Real but slow</th>
             <td role="cell" data-label="What it is">A specialized or hard search; held open until the hire actually starts.</td>
-            <td role="cell" data-label="What the candidate sees">A current opening with a close date. <strong>Coming:</strong> a fill-by or no-sooner-than date.</td>
+            <td role="cell" data-label="What the candidate sees">A current opening with a close date. A fill-by or no-sooner-than date (available at launch).</td>
             <td role="cell" data-label="What the employer must do">Keep the close date current. It can be extended once, by 1 to 15 days, with a reason. A date is an expectation, not a promise.</td>
             <td role="cell" data-label="What FightGhostJobs does not claim">That the search will end by the date.</td>
           </tr>
@@ -231,13 +234,13 @@
             <th scope="row" role="rowheader" data-label="Kind">Repost or renewal</th>
             <td role="cell" data-label="What it is">The same job returning under a new req number, or renewed automatically.</td>
             <td role="cell" data-label="What the candidate sees">The opening's own date added. It is a new opening.</td>
-            <td role="cell" data-label="What the employer must do">Not reuse a req number without a one-line reason, which is recorded. <strong>Coming:</strong> a near copy of a closed opening has to say why it is back.</td>
+            <td role="cell" data-label="What the employer must do">Not reuse a req number without a one-line reason, which is recorded. A near copy of a closed opening has to say why it is back (available at launch).</td>
             <td role="cell" data-label="What FightGhostJobs does not claim">Whether the reason is good.</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:15px;line-height:1.65;color:var(--muted);margin:20px 0 0;max-width:760px;">What no one can see from outside: a role quietly being kept for an internal hire, or one an executive keeps vetoing. We do not claim to catch those. We make the date an opening was added and the date of its last edit visible, and the stated kind is coming. That is what a candidate can act on.</p>
+    <p style="font-size:15px;line-height:1.65;color:var(--muted);margin:20px 0 0;max-width:760px;">What no one can see from outside: a role quietly being kept for an internal hire, or one an executive keeps vetoing. We do not claim to catch those. We make the date an opening was added and the date of its last edit visible, and the employer's stated kind (available at launch). That is what a candidate can act on.</p>
   </div>
 
   <!-- FOR CANDIDATES AND FOR EMPLOYERS -->
@@ -246,10 +249,14 @@
       <div class="eyebrow">For candidates</div>
       <h2 id="candidates-kinds-h" style="font-size:26px;font-weight:700;margin-top:8px;">What you get</h2>
       <p style="font-size:16px;line-height:1.65;color:var(--ink);font-weight:600;margin:12px 0 0;">Not every old job ad is fake. You still deserve to know which kind it is.</p>
+      <h3 class="kinds-group" style="color:var(--ink);">Built and in testing now</h3>
       <ul class="kinds-list" style="color:var(--ink);">
         <li><strong>See when it went live.</strong> The date the opening was added is on every opening.</li>
         <li><strong>See when it last changed.</strong> Every edit is logged with its date and a note; the date of the last edit is on the opening.</li>
-        <li><strong>Coming: see what kind it is.</strong> Hiring now, collecting resumes, on hold, or advertised to meet a requirement, in the employer's own words.</li>
+      </ul>
+      <h3 class="kinds-group" style="color:var(--muted);">Planned for the pilot launch</h3>
+      <ul class="kinds-list" style="color:var(--ink);">
+        <li><strong>See what kind it is.</strong> Hiring now, collecting resumes, on hold, or advertised to meet a requirement, in the employer's own words.</li>
       </ul>
       <p style="font-size:15px;line-height:1.65;color:var(--muted);margin:16px 0 0;">We do not decide for you whether to apply, and we do not claim an opening is funded or real. We show what the employer disclosed and when.</p>
       <div style="margin-top:22px;">
@@ -260,15 +267,19 @@
     <section id="employers-kinds" aria-labelledby="employers-kinds-h" style="flex:1;background:var(--ink);color:var(--bone);border-radius:16px;padding:26px;">
       <div class="eyebrow" style="color:#F2A98C;">For employers</div>
       <h2 id="employers-kinds-h" style="font-size:26px;font-weight:700;margin-top:8px;color:var(--bone);">The rules</h2>
-      <p style="font-size:16px;line-height:1.65;color:var(--bone);font-weight:600;margin:12px 0 0;">Tell candidates which kind of opening this is. We keep the record straight.</p>
-      <p style="font-size:15px;line-height:1.65;color:#E9E4DB;margin:12px 0 0;">A pipeline, a frozen role or a required advertisement is not a problem. Presenting it as an open job is. FightGhostJobs holds the record to the same rules for everyone. <strong>Coming:</strong> you say which kind it is.</p>
+      <p style="font-size:16px;line-height:1.65;color:var(--bone);font-weight:600;margin:12px 0 0;">Tell candidates which kind of opening this is (available at launch). We keep the record straight.</p>
+      <p style="font-size:15px;line-height:1.65;color:#E9E4DB;margin:12px 0 0;">A pipeline, a frozen role or a required advertisement is not a problem. Presenting it as an open job is. FightGhostJobs holds the record to the same rules for everyone. You say which kind it is (available at launch).</p>
+      <h3 class="kinds-group" style="color:var(--bone);">Built and in testing now</h3>
       <ul class="kinds-list" style="color:#E9E4DB;">
-        <li><strong>Coming: say which kind it is.</strong> Hiring now, filling no sooner than a date, collecting resumes, or advertised to meet a requirement. The wording is neutral.</li>
         <li><strong>Keep it current.</strong> Pause it when it is frozen. Close it when it is filled. Extend the close date once if you need to.</li>
-        <li><strong>Edits stay edits.</strong> A small correction saves at once. Changing more than a small part of the text, most of the title, or the location or remote setting means a new opening with its own req number. Every change needs a note and stays in the history.</li>
+        <li><strong>Edits stay edits.</strong> A small correction saves at once. Changing most of the text or most of the title means a new opening with its own req number. Changing the location or remote setting needs a new req number. Every change needs a note and stays in the history.</li>
         <li><strong>A req number is yours once.</strong> It cannot be reused without a one-line reason.</li>
-        <li><strong>Coming:</strong> only the job's title, duties and requirements count in that comparison. Your company blurb, pay, benefits and equal opportunity text do not.</li>
-        <li><strong>Coming:</strong> an opening that is nearly identical to one you closed has to say why it is back. Changing a little and calling it new does not reset the clock.</li>
+      </ul>
+      <h3 class="kinds-group" style="color:#C9C2B6;">Planned for the pilot launch</h3>
+      <ul class="kinds-list" style="color:#E9E4DB;">
+        <li><strong>Say which kind it is.</strong> Hiring now, filling no sooner than a date, collecting resumes, or advertised to meet a requirement. The wording is neutral.</li>
+        <li>Builds on the edit rule above: only the job's title, duties and requirements count in that comparison. Your company blurb, pay, benefits and equal opportunity text do not.</li>
+        <li>An opening that is nearly identical to one you closed has to say why it is back. Changing a little and calling it new does not reset the clock.</li>
       </ul>
       <p style="font-size:15px;line-height:1.65;color:#C9C2B6;margin:16px 0 0;">This is not a trap. Every refusal tells you what to do instead, and the rules are published so you know them up front.</p>
       <div style="margin-top:22px;">
