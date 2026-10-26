@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | FightGhostJobs</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+  :root{
+    --ink:#171412; --bone:#FBF7F1; --card:#FFFFFF; --ember:#C43E19; --ember-dark:#A8320F;
+    --verified:#1F7A5C; --line:#E7DFD3; --line-soft:#F0ECE3; --panel:#F4F1EA; --muted:#6B655C; --faint:#726C64; --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;
+  }
+  body{margin:0;font-family:'Work Sans',system-ui,sans-serif;background:var(--bone);color:var(--ink)}
+  a{color:var(--ember);text-decoration:none}
+  a:hover{color:var(--ember-dark)}
+  h1,h2,h3{margin:0;letter-spacing:-.01em}
+  .disp{font-family:'Space Grotesk',sans-serif}
+  .wrap{max-width:1200px;margin:0 auto;padding-left:64px;padding-right:64px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ember{background:var(--ember);color:#fff}
+
+  /* Brand: logo and accessibility (WCAG 2.2 AA). The logo is one link back to the start page on every page. */
+  .nav-logo{display:flex;align-items:center;gap:12px;color:var(--ink)}
+  .nav-mark{flex:none;display:block}
+  .nav-wordmark{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:-.025em}
+  .wm-fight{color:var(--ember)}
+  .wm-ghost{color:transparent;-webkit-text-stroke:1.2px var(--ink)}
+  .wm-jobs{color:var(--ink)}
+  @media (forced-colors:active){.wm-ghost{color:CanvasText;-webkit-text-stroke:0}}
+  .skip-link{position:absolute;left:-9999px;top:8px;padding:10px 16px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;border-radius:8px;background:var(--ink);color:#fff;font-size:14px;font-weight:600;z-index:100}
+  .skip-link:focus{left:8px;color:#fff}
+  main a:not(.btn):not([style*="display:block"]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  .wrap[style*="padding:32px 0"]{gap:16px 28px;flex-wrap:wrap}
+  @media (min-width:1024px){
+    .wrap[style*="padding:32px 0"]{width:calc(100% - 128px);padding-left:64px!important;padding-right:64px!important}
+  }
+  @media (max-width:1023px){
+    .wrap{padding-left:32px!important;padding-right:32px!important;width:100%;box-sizing:border-box}
+    [style*="height:88px"]{height:auto!important;flex-wrap:wrap!important;padding:14px 32px!important;gap:10px 24px!important}
+    [style*="height:88px"] > div[style*="gap:16px"]{flex:1 1 100%!important;justify-content:space-between!important}
+    [style*="height:88px"] > [style*="gap:36px"]{gap:8px 28px!important;flex-wrap:wrap!important}
+    [style*="height:88px"] > [style*="gap:36px"] > *{display:flex!important;align-items:center!important;min-height:44px!important}
+    [style*="height:88px"] > a[href="/"]{min-height:44px}
+    .btn{min-height:44px;box-sizing:border-box}
+    .wrap > div[style*="gap:28px"] a{display:inline-flex;align-items:center;min-height:44px}
+  }
+  @media (max-width:640px){
+    html{-webkit-text-size-adjust:100%}
+    body{overflow-wrap:break-word}
+    .wrap{padding-left:20px!important;padding-right:20px!important}
+    [style*="height:88px"]{padding:10px 20px!important;gap:4px 16px!important}
+    [style*="height:88px"] > a[href="/"],[style*="height:88px"] > div:first-child{flex:1 1 100%!important}
+    [style*="height:88px"] > [style*="gap:36px"]{flex:1 1 100%!important;gap:0 18px!important}
+    [style*="height:88px"] [style*="font-size:15px"]{font-size:15px!important}
+    [style*="height:88px"] > div[style*="gap:16px"]{flex-direction:column-reverse!important;align-items:stretch!important;gap:8px!important;padding:4px 0 6px}
+    [style*="height:88px"] > div[style*="gap:16px"] > span{text-align:center}
+    .wrap[style*="padding-top:88px"],.wrap[style*="padding-top:80px"]{padding-top:40px!important}
+    h1{font-size:34px!important}
+    [style*="font-size:14px"],[style*="font-size:15px"],[style*="font-size:13.5px"]{font-size:16px!important}
+    [style*="font-size:13px"],[style*="font-size:12.5px"]{font-size:14px!important}
+    [style*="height:88px"] [style*="font-size:14px"]{font-size:15px!important}
+    [style*="font-size:12.5px"],[style*="font-size:13px"],[style*="font-size:14px"],[style*="font-size:15px"],[style*="font-size:13.5px"]{line-height:1.55}
+    .btn{width:100%!important;min-height:48px}
+    .wrap[style*="padding:32px 0"]{flex-direction:column!important;align-items:flex-start!important;gap:8px!important}
+    .wrap > div[style*="gap:28px"]{gap:20px!important;flex-wrap:wrap}
+    [style*="font-size:22px"]{font-size:18px!important}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div style="width:100%;background:var(--bone);color:var(--ink);display:flex;flex-direction:column;">
+
+  <!-- NAV -->
+  <header style="height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--line);background:var(--card)">
+    <a href="/" class="nav-logo" aria-label="FightGhostJobs home" style="display:flex;align-items:center;gap:12px;"><svg class="nav-mark" width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="4.5" y="4.5" width="40" height="40" rx="10" fill="var(--ink)" fill-opacity=".16" stroke="var(--ink)" stroke-opacity=".55" stroke-width="2.4" stroke-dasharray="5 4"/><rect x="18" y="18" width="42" height="42" rx="10" fill="var(--ember)"/><path d="M29 40 L37 48 L50 31" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-wordmark"><span class="wm-fight">Fight</span><span class="wm-ghost">Ghost</span><span class="wm-jobs">Jobs</span></span></a>
+    <nav aria-label="Main" style="display:flex;gap:36px;">
+      <a href="/candidates.html" style="font-size:15px;font-weight:500;color:var(--ink)">For Candidates</a>
+      <a href="/employers.html" style="font-size:15px;font-weight:500;color:var(--ink)">For Employers</a>
+      <a href="/plans.html" style="font-size:15px;font-weight:500;color:var(--ink)">Plans</a>
+      <a href="/" style="font-size:15px;font-weight:500;color:var(--ink)">Home</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span style="font-size:14px;color:var(--muted);">sales@fightghostjobs.com</span>
+      <a href="mailto:sales@fightghostjobs.com?subject=I%20want%20to%20Fight%20Ghost%20Jobs%21" class="btn btn-ember" style="padding:11px 20px;font-size:14px;">Email us about the pilot →</a>
+    </div>
+  </header>
+
+  <main id="main" style="display:flex;flex-direction:column;">
+
+  <!-- PAGE NOT FOUND -->
+  <div class="wrap" style="padding-top:64px;padding-bottom:72px;">
+    <div style="max-width:720px;">
+      <h1 style="font-size:46px;line-height:1.1;font-weight:700;">Page not found</h1>
+      <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:14px 0 0;">The page you asked for is not here. It may have moved or the address may be mistyped.</p>
+      <p style="margin:28px 0 0;"><a href="/" class="btn btn-dark">Back to the home page</a></p>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="wrap" style="padding:32px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-size:13px;color:var(--faint);">FightGhostJobs · privacy@fightghostjobs.com · sales@fightghostjobs.com</div>
+    <div style="display:flex;gap:28px;">
+      <a href="/" style="font-size:13px;color:var(--faint);">Home</a>
+      <a href="/candidates.html" style="font-size:13px;color:var(--faint);">For Candidates</a>
+      <a href="/employers.html" style="font-size:13px;color:var(--faint);">For Employers</a>
+      <a href="/plans.html" style="font-size:13px;color:var(--faint);">Plans</a>
+      <a href="/kinds.html" style="font-size:13px;color:var(--faint);">Kinds of openings</a>
+      <a href="/privacy.html" style="font-size:13px;color:var(--faint);">Privacy</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
