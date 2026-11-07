@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FightGhostJobs: search from a screenshot on your iPhone</title>
+<meta name="description" content="How to get and use FGJ Share, a Shortcut for the iPhone that reads a screenshot of a job card and opens the FightGhostJobs search page with the text in the boxes.">
+<link rel="canonical" href="https://www.fightghostjobs.com/iphone.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FightGhostJobs">
+<meta property="og:title" content="FightGhostJobs: search from a screenshot on your iPhone">
+<meta property="og:description" content="How to get and use FGJ Share, a Shortcut for the iPhone that reads a screenshot of a job card and opens the FightGhostJobs search page with the text in the boxes.">
+<meta property="og:url" content="https://www.fightghostjobs.com/iphone.html">
+<meta property="og:image" content="https://www.fightghostjobs.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FightGhostJobs. Ghost jobs made every job ad a guess. We give employers a place to disclose the facts.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FightGhostJobs: search from a screenshot on your iPhone">
+<meta name="twitter:description" content="How to get and use FGJ Share, a Shortcut for the iPhone that reads a screenshot of a job card and opens the FightGhostJobs search page with the text in the boxes.">
+<style>
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Work Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/work-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/space-grotesk-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+  :root{
+    --ink:#171412; --bone:#FBF7F1; --card:#FFFFFF; --ember:#C43E19; --ember-dark:#A8320F;
+    --verified:#1F7A5C; --line:#E7DFD3; --line-soft:#F0ECE3; --panel:#F4F1EA; --muted:#6B655C; --faint:#726C64; --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;
+  }
+  body{margin:0;font-family:'Work Sans',system-ui,sans-serif;background:var(--bone);color:var(--ink)}
+  a{color:var(--ember);text-decoration:none}
+  a:hover{color:var(--ember-dark)}
+  h1,h2,h3{margin:0;letter-spacing:-.01em}
+  .disp{font-family:'Space Grotesk',sans-serif}
+  .wrap{max-width:1200px;margin:0 auto;padding-left:64px;padding-right:64px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;font-size:15px;font-weight:600;border:none;cursor:pointer}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ember{background:var(--ember);color:#fff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px}
+  .eyebrow{font-size:13px;font-weight:700;color:var(--ember);text-transform:uppercase;letter-spacing:.08em}
+  .chip{background:var(--panel);padding:7px 12px;border-radius:8px;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;color:var(--ink)}
+  .cite{font-size:12px;color:var(--faint);vertical-align:super}
+  .footnote{font-size:13px;line-height:1.7;color:var(--muted)}
+  .shot{width:100%;display:block;border-radius:10px;border:1px solid var(--line)}
+  .shotwrap{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 48px -28px rgba(23,20,18,.22)}
+  .caption{font-size:13px;color:var(--faint);margin-top:10px;}
+
+  /* Brand: logo and accessibility (WCAG 2.2 AA). The logo is one link back to the start page on every page. */
+  .nav-logo{display:flex;align-items:center;gap:12px;color:var(--ink)}
+  .nav-mark{flex:none;display:block}
+  .nav-wordmark{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:-.025em}
+  .wm-fight{color:var(--ember)}
+  .wm-ghost{color:transparent;-webkit-text-stroke:1.2px var(--ink)}
+  .wm-jobs{color:var(--ink)}
+  @media (forced-colors:active){.wm-ghost{color:CanvasText;-webkit-text-stroke:0}}
+  .skip-link{position:absolute;left:-9999px;top:8px;padding:10px 16px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;border-radius:8px;background:var(--ink);color:#fff;font-size:14px;font-weight:600;z-index:100}
+  .skip-link:focus{left:8px;color:#fff}
+  [aria-current="page"]{color:var(--ember);font-weight:700}
+  [style*="background:var(--ink)"] .cite{color:#9C958A}
+  main a:not(.btn):not([style*="display:block"]){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+  .mono{font-family:var(--font-mono);font-size:.92em;letter-spacing:0}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  /* Footer spacing fix. The footer bar used to shrink to the width of its own text, so the address touched the first link.
+     It now keeps a gap between the address and the links (and wraps if space runs out), and on desktop it is as wide as the page content again. */
+  .wrap[style*="padding:32px 0"]{gap:16px 28px;flex-wrap:wrap}
+  @media (min-width:1024px){
+    .wrap[style*="padding:32px 0"]{width:calc(100% - 128px);padding-left:64px!important;padding-right:64px!important}
+  }
+  /* Responsive layout for tablets and phones. Everything below is inside a media query for screens narrower than 1024px, so desktop is unchanged.
+     The pages style most things inline, so these rules match the inline styles and use !important to override them. */
+  @media (max-width:1023px){
+    .wrap{padding-left:32px!important;padding-right:32px!important;width:100%;box-sizing:border-box}
+    /* header: logo, links, then address and button, wrapping onto rows instead of overflowing */
+    [style*="height:88px"]{height:auto!important;flex-wrap:wrap!important;padding:14px 32px!important;gap:10px 24px!important}
+    [style*="height:88px"] > div[style*="gap:16px"]{flex:1 1 100%!important;justify-content:space-between!important}
+    [style*="height:88px"] > [style*="gap:36px"]{gap:8px 28px!important;flex-wrap:wrap!important}
+    [style*="height:88px"] > [style*="gap:36px"] > *{display:flex!important;align-items:center!important;min-height:44px!important}
+    [style*="height:88px"] > a[href="index.html"]{min-height:44px}
+    .btn{min-height:44px;box-sizing:border-box}
+    /* footer links */
+    .wrap > div[style*="gap:28px"] a{display:inline-flex;align-items:center;min-height:44px}
+    img{max-width:100%;height:auto}
+  }
+  @media (max-width:900px){
+    /* two-column sections stack into one column */
+    .wrap[style*="gap:56px"],.wrap[style*="gap:64px"],.card[style*="gap:40px"],[style*="display:flex;gap:32px;margin-top:16px"]{flex-direction:column!important;align-items:stretch!important;gap:32px!important}
+    .wrap[style*="gap:56px"] > *,.wrap[style*="gap:64px"] > *,.card[style*="gap:40px"] > *,[style*="display:flex;gap:32px;margin-top:16px"] > *{flex:0 0 auto!important;min-width:0}
+    [style*="grid-template-columns:repeat(4,minmax(0,1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  }
+  @media (max-width:640px){
+    html{-webkit-text-size-adjust:100%}
+    body{overflow-wrap:break-word}
+    .wrap{padding-left:20px!important;padding-right:20px!important}
+    /* header */
+    [style*="height:88px"]{padding:10px 20px!important;gap:4px 16px!important}
+    [style*="height:88px"] > a[href="index.html"],[style*="height:88px"] > div:first-child{flex:1 1 100%!important}
+    [style*="height:88px"] > [style*="gap:36px"]{flex:1 1 100%!important;gap:0 18px!important}
+    [style*="height:88px"] [style*="font-size:15px"]{font-size:15px!important}
+    [style*="height:88px"] > div[style*="gap:16px"]{flex-direction:column-reverse!important;align-items:stretch!important;gap:8px!important;padding:4px 0 6px}
+    [style*="height:88px"] > div[style*="gap:16px"] > span{text-align:center}
+    [style*="height:88px"] > .chip{flex:1 1 100%;justify-content:center;box-sizing:border-box}
+    /* section spacing */
+    .wrap[style*="padding-top:88px"],.wrap[style*="padding-top:80px"]{padding-top:40px!important}
+    [style*="padding:80px 0"],[style*="padding:72px 0"],[style*="padding:64px 0"]{padding-top:48px!important;padding-bottom:48px!important}
+    .card[style*="padding:36px"],.card[style*="padding:32px"],.card[style*="padding:28px"]{padding:22px!important}
+    /* type */
+    h1{font-size:34px!important}
+    h2[style*="font-size:34px"],h2[style*="font-size:32px"],h2[style*="font-size:30px"]{font-size:26px!important}
+    [style*="font-size:14px"],[style*="font-size:15px"],[style*="font-size:13.5px"]{font-size:16px!important}
+    [style*="font-size:13px"],[style*="font-size:12.5px"]{font-size:14px!important}
+    [style*="height:88px"] [style*="font-size:14px"]{font-size:15px!important}
+    [style*="font-size:12.5px"],[style*="font-size:13px"],[style*="font-size:14px"],[style*="font-size:15px"],[style*="font-size:13.5px"]{line-height:1.55}
+    [style*="background:var(--ink);padding:28px 24px"],[style*="background:var(--ink);padding:24px 22px"]{padding-left:4px!important;padding-right:4px!important}
+    .footnote,.caption,.mock-banner{font-size:14px!important;line-height:1.7}
+    .footnote[style*="flex-direction:column"]{gap:12px!important}
+    td{font-size:15px}
+    /* buttons fill the row and are easy to tap */
+    .btn{width:100%!important;min-height:48px}
+    [style*="justify-content:center;margin-top:28px"]{flex-direction:column!important}
+    /* grids and card rows become one column */
+    [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns:repeat(3,minmax(0,1fr))"],[style*="grid-template-columns:repeat(4,minmax(0,1fr))"]{grid-template-columns:minmax(0,1fr)!important}
+    [style*="justify-content:space-between;padding:16px 24px"]{flex-direction:column!important;gap:6px!important;padding:14px 16px!important}
+    /* footer */
+    .wrap[style*="padding:32px 0"]{flex-direction:column!important;align-items:flex-start!important;gap:8px!important}
+    .wrap > div[style*="gap:28px"]{gap:20px!important;flex-wrap:wrap}
+    /* small mock of the employer dashboard: shrink so it fits on the narrowest phones */
+    [style*="background:#FBF7F1;padding:20px"]{padding:12px!important}
+    [style*="border-radius:10px;padding:14px"]{padding:10px!important}
+    [style*="font-size:22px"]{font-size:18px!important}
+    /* sample dashboard: the table scrolls sideways inside its own card, the page itself does not */
+    .card[style*="overflow:hidden"]{overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+    table{min-width:720px}
+    td:first-child,th:first-child{min-width:190px}
+    .kpi{padding:16px!important}
+    /* the "Verified" tooltip stays on screen */
+    .verified-tooltip{width:min(290px,calc(100vw - 48px));left:50%;transform:translateX(-50%)}
+    .verified-tooltip::after{left:50%;margin-left:-6px}
+  }
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div style="width:100%;background:var(--bone);color:var(--ink);display:flex;flex-direction:column;">
+
+  <!-- NAV -->
+  <header style="height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--line);background:var(--card)">
+    <a href="index.html" class="nav-logo" aria-label="FightGhostJobs home" style="display:flex;align-items:center;gap:12px;"><svg class="nav-mark" width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="4.5" y="4.5" width="40" height="40" rx="10" fill="var(--ink)" fill-opacity=".16" stroke="var(--ink)" stroke-opacity=".55" stroke-width="2.4" stroke-dasharray="5 4"/><rect x="18" y="18" width="42" height="42" rx="10" fill="var(--ember)"/><path d="M29 40 L37 48 L50 31" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-wordmark"><span class="wm-fight">Fight</span><span class="wm-ghost">Ghost</span><span class="wm-jobs">Jobs</span></span></a>
+    <nav aria-label="Main" style="display:flex;gap:36px;">
+      <a href="candidates.html" style="font-size:15px;font-weight:500;color:var(--ink)">For Candidates</a>
+      <a href="employers.html" style="font-size:15px;font-weight:500;color:var(--ink)">For Employers</a>
+      <a href="plans.html" style="font-size:15px;font-weight:500;color:var(--ink)">Plans</a>
+      <a href="index.html" style="font-size:15px;font-weight:500;color:var(--ink)">Home</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span style="font-size:14px;color:var(--muted);">sales@fightghostjobs.com</span>
+      <a href="mailto:sales@fightghostjobs.com?subject=I%20want%20to%20Fight%20Ghost%20Jobs%21" class="btn btn-ember" style="padding:11px 20px;font-size:14px;">Email us about the pilot →</a>
+    </div>
+  </header>
+
+  <main id="main" style="display:flex;flex-direction:column;">
+
+  <!-- IPHONE SHORTCUT (prompt IZ, local branch fgj-iz-iphone-page) -->
+  <div class="wrap" style="padding-top:64px;padding-bottom:72px;">
+    <div style="max-width:720px;">
+      <div class="eyebrow">iPhone Shortcut</div>
+      <h1 style="font-size:46px;line-height:1.1;font-weight:700;margin-top:10px;">Search from a screenshot on your iPhone.</h1>
+      <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:14px 0 0;">FGJ Share is a Shortcut for the iPhone. You take a screenshot of a job card and share it to the Shortcut. The Shortcut reads the text in the screenshot and opens our search page, which puts what it found into the boxes. You check the boxes and press Search.</p>
+
+      <h2 style="font-size:24px;font-weight:700;margin-top:44px;">Get the Shortcut</h2>
+      <div id="iph-get" style="margin-top:14px;">
+        <p id="iph-soon" style="font-size:16px;line-height:1.7;color:var(--muted);margin:0;">Coming soon.</p>
+      </div>
+
+      <h2 style="font-size:24px;font-weight:700;margin-top:44px;">The first time you run it</h2>
+      <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:14px 0 0;">Your iPhone asks two questions the first time.</p>
+      <ul style="margin:14px 0 0;padding-left:22px;font-size:16px;line-height:1.7;color:var(--muted);">
+        <li style="margin:0 0 10px 0;">It asks whether the Shortcut may open the FightGhostJobs website. Tap Allow.</li>
+        <li style="margin:0 0 10px 0;">It asks about deleting the screenshot, with two choices. Delete removes the screenshot this time, and the question comes back each time you run the Shortcut. Delete Always removes the screenshot this time, and the question does not come back on later runs.</li>
+      </ul>
+      <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:14px 0 0;">After you approve, the Shortcut deletes your most recent screenshot. You can get it back from Recently Deleted on your phone.</p>
+
+      <h2 style="font-size:24px;font-weight:700;margin-top:44px;">How to use it</h2>
+      <ol style="margin:14px 0 0;padding-left:22px;font-size:16px;line-height:1.7;color:var(--muted);">
+        <li style="margin:0 0 10px 0;">Take a screenshot that shows the whole job card: the company, the job title, and any requisition number or KIO ID.</li>
+        <li style="margin:0 0 10px 0;">Tap Share.</li>
+        <li style="margin:0 0 10px 0;">Choose FGJ Share.</li>
+        <li style="margin:0 0 10px 0;">Read the text in the alert. If it shows personal information, tap Cancel.</li>
+        <li style="margin:0 0 10px 0;">Otherwise continue. Our search page opens with the boxes filled.</li>
+        <li style="margin:0 0 10px 0;">Check the boxes.</li>
+        <li style="margin:0 0 10px 0;">Press Search.</li>
+      </ol>
+
+      <h2 style="font-size:24px;font-weight:700;margin-top:44px;">What it cannot do</h2>
+      <ul style="margin:14px 0 0;padding-left:22px;font-size:16px;line-height:1.7;color:var(--muted);">
+        <li style="margin:0 0 10px 0;">It cannot know what is in your screenshot. The reader looks only for the details on a job card: the company, the job title, the requisition number and the KIO ID. It can still pick up other text that it was not meant to read.</li>
+        <li style="margin:0 0 10px 0;">It cannot check your screenshot for you. It is up to you to make sure the screenshot shows only a job opening. Before the Shortcut opens our page, it shows you the text it read, with a Cancel button.</li>
+        <li style="margin:0 0 10px 0;">It cannot search for you. Nothing is searched until you press the normal Search button.</li>
+        <li style="margin:0 0 10px 0;">It cannot always find an opening. When it cannot, our page asks you to type the company and the job title, the requisition number or the KIO ID.</li>
+      </ul>
+
+      <h2 style="font-size:24px;font-weight:700;margin-top:44px;">What happens to the text</h2>
+      <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:14px 0 0;">The Shortcut reads the text in the screenshot and opens our search page with that text after the # sign in the web address. Our search page puts that text into the boxes. Nothing is searched, and nothing is sent to us, until you press the normal Search button. The address with the text in it may stay in your browser history on your phone. We never receive the screenshot. See our <a href="privacy.html">privacy policy</a>.</p>
+
+      <h2 style="font-size:24px;font-weight:700;margin-top:44px;">How to remove it</h2>
+      <p style="font-size:16px;line-height:1.7;color:var(--muted);margin:14px 0 0;">Delete the FGJ Share Shortcut in the Shortcuts app.</p>
+    </div>
+  </div>
+
+  <script>
+  // THE ONE PLACE THE SHORTCUT LINK GOES (prompt IZ). SHORTCUT_URL ships empty: the page then says Coming soon.
+  // When it holds an address on icloud.com/shortcuts (https, no user name, no port), the words become a button that opens it. Any other value is ignored and the page still says Coming soon.
+  // This script makes no request, sets no cookie and keeps nothing in the browser.
+  var SHORTCUT_URL = "";
+  (function () {
+    var slot = document.getElementById("iph-get"), soon = document.getElementById("iph-soon");
+    if (!slot || !soon) return;
+    var u;
+    try { u = new URL(SHORTCUT_URL); } catch (e) { return; }
+    if (u.protocol !== "https:" || u.username !== "" || u.password !== "" || u.port !== "") return;
+    if (u.hostname !== "icloud.com" && u.hostname !== "www.icloud.com") return;
+    if (u.pathname.indexOf("/shortcuts/") !== 0 || u.pathname.length <= "/shortcuts/".length) return;
+    var a = document.createElement("a");
+    a.className = "btn btn-ember";
+    a.href = u.href;
+    a.rel = "noopener";
+    a.textContent = "Get the Shortcut";
+    slot.replaceChild(a, soon);
+  })();
+  </script>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="wrap" style="padding:32px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-size:13px;color:var(--faint);">FightGhostJobs · privacy@fightghostjobs.com · sales@fightghostjobs.com</div>
+    <div style="display:flex;gap:28px;">
+      <a href="index.html" style="font-size:13px;color:var(--faint);">Home</a>
+      <a href="candidates.html" style="font-size:13px;color:var(--faint);">For Candidates</a>
+      <a href="employers.html" style="font-size:13px;color:var(--faint);">For Employers</a>
+      <a href="plans.html" style="font-size:13px;color:var(--faint);">Plans</a>
+      <a href="kinds.html" style="font-size:13px;color:var(--faint);">Kinds of openings</a>
+      <a href="privacy.html" style="font-size:13px;color:var(--faint);">Privacy</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
