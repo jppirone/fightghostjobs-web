@@ -143,6 +143,11 @@
     .verified-tooltip::after{left:50%;margin-left:-6px}
   }
 
+  /* Shortcut band (prompt ND, November 15, 2026): a thin line above the header. Not sticky, not fixed, no close control, stores nothing. */
+  .sc-band{background:var(--ink);color:#fff;font-size:15px;line-height:1.45;text-align:center;padding:10px 20px;box-sizing:border-box}
+  .sc-band a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+  .sc-band a:hover{color:#fff;text-decoration-thickness:2px}
+  .sc-band a:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:2px}
 </style>
 <style>
   @media (max-width:640px){h2.kept-headline{font-size:34px!important}}
@@ -151,6 +156,9 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div style="width:100%;background:var(--bone);color:var(--ink);display:flex;flex-direction:column;">
+
+  <!-- SHORTCUT BAND -->
+  <div class="sc-band">On an iPhone, <a href="iphone.html">download the Shortcut</a> to help fight ghost jobs.</div>
 
   <!-- NAV -->
   <header style="height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;border-bottom:1px solid var(--line);background:var(--card)">
