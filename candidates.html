@@ -158,11 +158,19 @@
   .sc-band a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}
   .sc-band a:hover{color:#fff;text-decoration-thickness:2px}
   .sc-band a:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:2px}
+  /* Extension band (prompt NT, November 16, 2026): the same thin line as the Shortcut band, stacked directly above it. Not sticky, not fixed, no close control, stores nothing. */
+  .ext-band{background:var(--ink);color:#fff;font-size:15px;line-height:1.45;text-align:center;padding:10px 20px;box-sizing:border-box}
+  .ext-band a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+  .ext-band a:hover{color:#fff;text-decoration-thickness:2px}
+  .ext-band a:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div style="width:100%;background:var(--bone);color:var(--ink);display:flex;flex-direction:column;">
+
+  <!-- EXTENSION BAND -->
+  <div class="ext-band">Download the <a href="https://chromewebstore.google.com/detail/decmgocpcgdbenpclgekokcdfficnpge" target="_blank" rel="noopener noreferrer">FightGhostJobs extension</a> and help fight ghost jobs on other sites.</div>
 
   <!-- SHORTCUT BAND -->
   <div class="sc-band">On an iPhone, <a href="iphone.html">download the Shortcut</a> to help fight ghost jobs.</div>
